@@ -1,0 +1,42 @@
+int left, right;
+string is_prime = "true";
+left = 1;
+right = 1;
+while (right < 25)
+{
+right+=1; 
+} 
+
+for(int k = 1;k<10;k++){
+for(int j = 1;j<10;j++){
+Console.Write($"i - {k}");
+Console.WriteLine($"j - {j}");
+}
+}
+while (left < right)
+{
+is_prime = "true";
+
+if (left == 0)
+{
+is_prime = "false";
+}
+
+if (left == 1)
+{
+is_prime = "false";
+}
+for (int i = 2; i <= left / 2; i++)
+{
+if (left % 2 == 0)
+{
+is_prime = "false";
+break;
+}
+}
+if (is_prime == "true")
+{
+Console.Write($"{left}");
+}
+left += 1;
+}
